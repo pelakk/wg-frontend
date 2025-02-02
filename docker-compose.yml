@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  nextjs-app:
+    image: warsawgoats
+    container_name: warsaw-goats
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:3000"
+    environment:
+      # Set environment variables here if needed
+      NODE_ENV: production
